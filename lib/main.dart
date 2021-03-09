@@ -8,6 +8,7 @@ import 'package:flutter_ap/bobssignup.dart';
 import 'package:flutter_ap/carddetail.dart';
 import 'package:flutter_ap/cartdetail.dart';
 import 'package:flutter_ap/dashboard.dart';
+import 'package:flutter_ap/fragment.dart';
 import 'package:flutter_ap/location.dart';
 import 'package:flutter_ap/notification.dart';
 import 'package:flutter_ap/product_profile.dart';
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: verify(),
+      home: Splash(),
     );
   }
 }

@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: orderhistory(),
+    home: fragment(),
   ));
 }
 
-class orderhistory extends StatefulWidget {
+class fragment extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -16,7 +16,7 @@ class orderhistory extends StatefulWidget {
   }
 }
 
-class TabsState extends State<orderhistory> {
+class TabsState extends State<fragment> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -24,7 +24,7 @@ class TabsState extends State<orderhistory> {
     return DefaultTabController(
         length: 3,
         child: new Scaffold(
-            backgroundColor: Colors.yellow[600],
+          backgroundColor: Colors.yellow[600],
             appBar: AppBar(
               backgroundColor: Colors.black,
               title: Text(
@@ -51,11 +51,11 @@ class TabsState extends State<orderhistory> {
                 child: new Container(
                   color: Colors.yellow[600],
                   child: Center(
-                      child: Column(
-                        children: <Widget>[
-                          OrderPending(),
-                        ],
-                      )
+                    child: Column(
+                      children: <Widget>[
+                        OrderPending(),
+                      ],
+                    )
                   ),
                 ),
               ),
@@ -75,11 +75,11 @@ class TabsState extends State<orderhistory> {
                 child: new Container(
                   color: Colors.yellow[600],
                   child: Center(
-                    child: new Column(
-                      children: <Widget>[
-                        OrderCanceled(),
-                      ],
-                    ),
+                      child: new Column(
+                        children: <Widget>[
+                          OrderCanceled(),
+                        ],
+                      ),
                   ),
                 ),
               ),
@@ -105,7 +105,7 @@ class TabsState extends State<orderhistory> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Padding(
-                      padding: EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.08),
+                        padding: EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.08),
                       child: Column(
                         children: <Widget>[
                           Text("Order ID : FINGO-00001", style: TextStyle(color: Colors.white, fontSize: 20),),

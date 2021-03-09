@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ap/Home.dart';
 import 'package:flutter_ap/SignUp.dart';
+import 'package:flutter_ap/ordershistory.dart';
 
 class admin extends StatelessWidget {
   TextEditingController nameController;
@@ -90,12 +91,16 @@ class admin extends StatelessWidget {
                   //trailing: Icon(Icons.ac_unit),
                 ),
               ),
-              Card(
-                color: Colors.black,
-                child: ListTile(
-                  leading: Icon(Icons.add_shopping_cart , color: Colors.yellow[600],),
-                  title: Center(child: Text("Orders" , style: TextStyle(color: Colors.yellow[600] , fontSize: 20),)),
-                  //trailing: Icon(Icons.ac_unit),
+              InkWell(
+                onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => orderhistory()));
+                },
+                child: Card(
+                  color: Colors.black,
+                  child: ListTile(
+                    leading: Icon(Icons.add_shopping_cart , color: Colors.yellow[600],),
+                    title: Center(child: Text("Orders" , style: TextStyle(color: Colors.yellow[600] , fontSize: 20),)),
+                    //trailing: Icon(Icons.ac_unit),
+                  ),
                 ),
               ),
               Card(
